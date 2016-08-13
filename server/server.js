@@ -1,5 +1,6 @@
 import bodyParser from 'body-parser';
 import compression from 'compression';
+import cors from 'cors';
 import express from 'express';
 import morgan from 'morgan';
 
@@ -14,6 +15,7 @@ import schema from './data/schema';
 const DEBUG = config.env !== 'production';
 const server = express();
 
+server.use(cors());
 server.use(compression());
 server.use(morgan(DEBUG ? 'dev' : 'combined'));
 
