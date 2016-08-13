@@ -1,3 +1,4 @@
 {
-  "extends": "richardkall"
+  "extends": "richardkall",
+  "parser": "babel-eslint"
 }
