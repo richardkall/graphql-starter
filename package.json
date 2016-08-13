@@ -2,5 +2,12 @@
   "name": "apollo-starter",
   "version": "0.0.0",
   "private": true,
-  "scripts": {}
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "3.3.0",
+    "eslint-config-richardkall": "4.1.0",
+    "eslint-plugin-import": "1.13.0"
+  }
 }
