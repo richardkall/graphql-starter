@@ -24,8 +24,10 @@
     "compression": "1.6.2",
     "express": "4.14.0",
     "graphql": "0.6.2",
+    "graphql-tools": "0.6.4",
     "mongoose": "4.5.8",
     "morgan": "1.7.0",
+    "node-uuid": "1.4.7",
     "nodemon": "1.10.0"
   }
 }
