@@ -28,3 +28,7 @@ Start production server:
 ```bash
 $ NODE_ENV=production npm start
 ```
+
+## License
+
+MIT © [Richard Käll](https://richardkall.se)
