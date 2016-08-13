@@ -2,6 +2,13 @@
 
 > Starter kit for creating GraphQL servers with [Apollo](https://github.com/apollostack/apollo-server).
 
+## Features
+
+- [x] [Apollo Server](https://github.com/apollostack/apollo-server)
+- [x] [Express](https://github.com/expressjs/express)
+- [x] [GraphiQL](https://github.com/graphql/graphiql)
+- [x] [Mongoose](https://github.com/Automattic/mongoose)
+
 ## Setup
 
 ```bash
