@@ -1,5 +1,4 @@
 import {GraphQLError} from 'graphql/error';
-
 import {User} from '../../connectors';
 
 export default async function (root, {id}) {

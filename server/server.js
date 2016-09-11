@@ -3,11 +3,7 @@ import compression from 'compression';
 import cors from 'cors';
 import express from 'express';
 import morgan from 'morgan';
-
-import {
-  apolloExpress,
-  graphiqlExpress
-} from 'apollo-server';
+import {apolloExpress, graphiqlExpress} from 'apollo-server';
 
 import config from '../config';
 import schema from './data/schema';
