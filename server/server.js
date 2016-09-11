@@ -8,18 +8,18 @@ import {apolloExpress, graphiqlExpress} from 'apollo-server';
 import config from '../config';
 import schema from './data/schema';
 
-const DEBUG = config.env !== 'production';
+const isProduction = config.env === 'production';
 const server = express();
 
 server.use(cors());
 server.use(compression());
-server.use(morgan(DEBUG ? 'dev' : 'combined'));
+server.use(morgan(isProduction ? 'combined' : 'dev'));
 
 server.use('/graphql', bodyParser.json(), apolloExpress({
   schema
 }));
 
-if (DEBUG) {
+if (!isProduction) {
   server.use('/graphiql', graphiqlExpress({
     endpointURL: '/graphql'
   }));
