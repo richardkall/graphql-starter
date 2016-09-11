@@ -12,7 +12,7 @@
 ## Setup
 
 ```bash
-$ npm install
+$ npm i
 ```
 
 ## Usage
