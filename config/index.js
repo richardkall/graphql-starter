@@ -1,15 +1,15 @@
 const {
   MONGODB_URI,
   NODE_ENV,
-  PORT
+  PORT,
 } = process.env;
 
 export default {
   env: NODE_ENV || 'development',
   database: {
-    uri: MONGODB_URI || 'mongodb://localhost/apollo-starter'
+    uri: MONGODB_URI || 'mongodb://localhost/apollo-starter',
   },
   server: {
-    port: PORT || 5000
-  }
+    port: PORT || 5000,
+  },
 };

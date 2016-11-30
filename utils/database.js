@@ -2,11 +2,11 @@ import mongoose from 'mongoose';
 import config from '../config';
 
 export default {
-  open () {
+  open() {
     mongoose.Promise = global.Promise;
     mongoose.connect(config.database.uri);
   },
-  close () {
+  close() {
     mongoose.connection.close();
-  }
+  },
 };

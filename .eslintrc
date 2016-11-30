@@ -1,7 +1,3 @@
 {
-  "extends": "richardkall",
-  "parser": "babel-eslint",
-  "rules": {
-    "sort-keys": 0
-  }
+  "extends": "airbnb"
 }
