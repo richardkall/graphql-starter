@@ -1,12 +1,20 @@
-import mongoose from 'mongoose';
-import uuid from 'node-uuid';
-
-const UserSchema = new mongoose.Schema({
-  _id: {
-    type: String,
-    default: uuid.v4,
+const USERS = [
+  {
+    id: '1',
+    email: 'user1@example.com',
   },
-  email: String,
-});
+  {
+    id: '2',
+    email: 'user2@example.com',
+  },
+  {
+    id: '3',
+    email: 'user3@example.com',
+  },
+];
 
-export default mongoose.model('User', UserSchema);
+export default {
+  findOne(id) {
+    return USERS.find(user => user.id === id);
+  },
+};

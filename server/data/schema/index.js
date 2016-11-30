@@ -5,7 +5,7 @@ import types from './types';
 
 const schema = `
   type Query {
-    user(id: String!) : User
+    user(id: ID!) : User
   }
 
   schema {

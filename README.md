@@ -7,7 +7,6 @@
 - [x] [Express](https://github.com/expressjs/express)
 - [x] [GraphQL Server](https://github.com/apollostack/graphql-server)
 - [x] [GraphiQL](https://github.com/graphql/graphiql)
-- [x] [Mongoose](https://github.com/Automattic/mongoose)
 
 ## Setup
 

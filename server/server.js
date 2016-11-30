@@ -3,17 +3,13 @@ import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
 import express from 'express';
-import mongoose from 'mongoose';
 import morgan from 'morgan';
 
-import { DATABASE_URI, ENV, PORT } from '../config/server';
+import { ENV, PORT } from '../config/server';
 import schema from './data/schema';
 
 const isProduction = ENV === 'production';
 const app = express();
-
-mongoose.Promise = global.Promise;
-mongoose.connect(DATABASE_URI);
 
 app.use(cors());
 app.use(compression());
