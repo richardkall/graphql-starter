@@ -1,4 +1,7 @@
 {
   "presets": ["es2015"],
-  "plugins": ["transform-regenerator"]
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-regenerator"
+  ]
 }

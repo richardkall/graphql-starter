@@ -1,11 +1,10 @@
-import { GraphQLError } from 'graphql/error';
-import { User } from '../../connectors';
+import User from '../../connectors/User';
 
 export default async function (root, { id }) {
   const user = await User.findOne({ _id: id });
 
   if (!user) {
-    throw new GraphQLError(`No user found with id ${id}`);
+    throw new Error(`No user found with id ${id}`);
   }
 
   return user;

@@ -1,7 +1,7 @@
-import { user } from './queries';
+import queries from './queries';
 
 export default {
   Query: {
-    user,
+    ...queries,
   },
 };

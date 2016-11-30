@@ -1,30 +1,30 @@
+import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
 import express from 'express';
+import mongoose from 'mongoose';
 import morgan from 'morgan';
-import { apolloExpress, graphiqlExpress } from 'apollo-server';
 
-import config from '../config';
+import { DATABASE_URI, ENV, PORT } from '../config/server';
 import schema from './data/schema';
 
-const isProduction = config.env === 'production';
-const server = express();
+const isProduction = ENV === 'production';
+const app = express();
 
-server.use(cors());
-server.use(compression());
-server.use(morgan(isProduction ? 'combined' : 'dev'));
+mongoose.Promise = global.Promise;
+mongoose.connect(DATABASE_URI);
 
-server.use('/graphql', bodyParser.json(), apolloExpress({
-  schema,
-}));
+app.use(cors());
+app.use(compression());
+app.use(morgan(isProduction ? 'combined' : 'dev'));
+
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
 
 if (!isProduction) {
-  server.use('/graphiql', graphiqlExpress({
-    endpointURL: '/graphql',
-  }));
+  app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 }
 
-server.listen(config.server.port, () =>
-  console.info(`Server running in ${server.get('env')} on port ${config.server.port}`), // eslint-disable-line no-console
-);
+app.listen(PORT, () => {
+  console.info(`GraphQL Server running on port ${PORT}`); // eslint-disable-line no-console
+});

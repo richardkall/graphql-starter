@@ -1,18 +1,18 @@
-# Apollo Starter
+# GraphQL Starter
 
-> Starter kit for creating GraphQL servers with [Apollo](https://github.com/apollostack/apollo-server).
+> Starter kit for creating GraphQL servers.
 
 ## Features
 
-- [x] [Apollo Server](https://github.com/apollostack/apollo-server)
 - [x] [Express](https://github.com/expressjs/express)
+- [x] [GraphQL Server](https://github.com/apollostack/graphql-server)
 - [x] [GraphiQL](https://github.com/graphql/graphiql)
 - [x] [Mongoose](https://github.com/Automattic/mongoose)
 
 ## Setup
 
 ```bash
-$ npm i
+$ npm install
 ```
 
 ## Usage
