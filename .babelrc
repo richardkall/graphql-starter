@@ -2,6 +2,11 @@
   "presets": ["es2015"],
   "plugins": [
     "transform-object-rest-spread",
-    "transform-regenerator"
+    "transform-regenerator",
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true
+    }]
   ]
 }
