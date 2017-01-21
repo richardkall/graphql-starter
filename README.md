@@ -25,7 +25,7 @@ $ npm run dev
 Start production server:
 
 ```bash
-$ NODE_ENV=production npm start
+$ npm run build && npm start
 ```
 
 ## License
