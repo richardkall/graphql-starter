@@ -5,7 +5,7 @@
   "scripts": {
     "build": "babel src -d build",
     "dev": "nodemon src --exec babel-node",
-    "lint": "eslint .",
+    "lint": "eslint --ignore-path .gitignore .",
     "prebuild": "rimraf build/*",
     "start": "node build"
   },
