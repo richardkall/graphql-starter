@@ -6,7 +6,7 @@
     "build": "babel src -d build",
     "dev": "nodemon src --exec babel-node",
     "lint": "eslint .",
-    "prebuild": "rm -rf build",
+    "prebuild": "rimraf build/*",
     "start": "node build"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "graphql": "0.8.2",
     "graphql-server-express": "0.5.1",
     "graphql-tools": "0.9.0",
-    "morgan": "1.7.0"
+    "morgan": "1.7.0",
+    "rimraf": "2.5.4"
   }
 }
