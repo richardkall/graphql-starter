@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "nodemon src -w src",
     "lint": "eslint .",
-    "start": "node src",
-    "start-dev": "nodemon src -w src"
+    "start": "node src"
   },
   "devDependencies": {
     "eslint": "3.13.1",
