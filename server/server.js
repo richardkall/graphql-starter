@@ -5,10 +5,10 @@ import cors from 'cors';
 import express from 'express';
 import morgan from 'morgan';
 
-import { ENV, PORT } from '../config/server';
 import schema from './data/schema';
 
-const isProduction = ENV === 'production';
+const isProduction = process.env.NODE_ENV === 'production';
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors());
@@ -21,6 +21,6 @@ if (!isProduction) {
   app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 }
 
-app.listen(PORT, () => {
-  console.info(`GraphQL Server running on port ${PORT}`); // eslint-disable-line no-console
+app.listen(port, () => {
+  console.info(`GraphQL Server running on port ${port}`); // eslint-disable-line no-console
 });
