@@ -21,6 +21,4 @@ if (!isProduction) {
   app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 }
 
-app.listen(port, () => {
-  console.info(`GraphQL Server running on port ${port}`); // eslint-disable-line no-console
-});
+app.listen(port, console.info(`GraphQL Server running on port ${port}`)); // eslint-disable-line no-console
