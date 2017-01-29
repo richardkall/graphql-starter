@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "cross-env NODE_ENV=production babel src -d build",
-    "dev": "cross-env NODE_ENV=development nodemon src --exec babel-node --harmony-async-await",
+    "build": "babel src -d build",
+    "dev": "nodemon src --exec babel-node --harmony-async-await",
     "lint": "eslint --ignore-path .gitignore .",
     "prebuild": "rimraf build/*",
-    "start": "cross-env NODE_ENV=production node --harmony-async-await build"
+    "start": "node --harmony-async-await build"
   },
   "devDependencies": {
     "eslint": "3.13.1",
@@ -22,7 +22,6 @@
     "body-parser": "1.16.0",
     "compression": "1.6.2",
     "cors": "2.8.1",
-    "cross-env": "3.1.4",
     "express": "4.14.1",
     "graphql": "0.9.1",
     "graphql-server-express": "0.5.2",
