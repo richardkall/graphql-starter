@@ -2,12 +2,15 @@
   "name": "graphql-starter",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=7.6"
+  },
   "scripts": {
     "build": "babel src -d build",
-    "dev": "nodemon src --exec babel-node --harmony-async-await",
+    "dev": "nodemon src --exec babel-node",
     "lint": "eslint --ignore-path .gitignore .",
     "prebuild": "rimraf build/*",
-    "start": "node --harmony-async-await build"
+    "start": "node build"
   },
   "devDependencies": {
     "eslint": "3.18.0",
